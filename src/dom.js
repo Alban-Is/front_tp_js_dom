@@ -53,5 +53,9 @@ var btn = document.createElement('button')
 btn.textContent = 'Décompte'
 document.body.appendChild(btn)
 btn.addEventListener('click',function(){
-  runChrono(8)
+  var divChrono = document.getElementById('counter')
+  if(divChrono != null){
+    divChrono.parentNode.removeChild(divChrono)
+  }
+  runChrono((Math.floor(Math.random() * 10))+1)
 })
